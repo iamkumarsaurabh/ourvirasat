@@ -191,7 +191,7 @@ checkoutBtn.addEventListener('click', () => {
     rawMessage += `\nPlease send over the confirmation receipt!`;
 
     const encodedMessage = encodeURIComponent(rawMessage);
-    const whatsappNumber = "917015679481";
+    const whatsappNumber = "918529048982";
     const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
     window.open(whatsappURL, '_blank');

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virasat | Authentic Modern Dhaba</title>
+    <link rel="stylesheet" href="virasatstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Yatra+One&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="ambient-glow glow-3"></div>
+
+    <nav class="navbar" id="navbar">
+        <div class="logo">
+            VIRASAT <span class="hindi-text">विरासत</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Our Story</a></li>
+            <li><a href="#menu">Order Online</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#feedback">Feedback</a></li>
+            <li class="theme-switch-container">
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme Mode">
+                    <i class="fas fa-sun"></i>
+                </button>
+            </li>
+            <li><a href="#contact" class="btn-small curvy-btn">Visit Us</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <div id="cart-icon" class="cart-icon">
+        <i class="fas fa-shopping-bag"></i>
+        <span id="cart-count">0</span>
+    </div>
+
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content curvy">
+            <div class="cart-header">
+                <h2>Your Order Table</h2>
+                <span class="close-cart"><i class="fas fa-times"></i></span>
+            </div>
+            <ul id="cart-items">
+            </ul>
+            <div class="cart-total">Subtotal: ₹<span id="total-price">0</span></div>
+
+            <div class="special-instructions">
+                <textarea id="order-notes" rows="2"
+                    placeholder="Any chef requests? (e.g., Less oil, extra butter on Naan...)"></textarea>
+            </div>
+
+            <button id="checkout-btn" class="btn curvy-btn gold-glow" style="width:100%; margin-top: 20px;">
+                Send Order to Kitchen <i class="fab fa-whatsapp" style="margin-left: 8px;"></i>
+            </button>
+        </div>
+    </div>
+
+    <div id="toast-container"></div>
+
+    <section id="home" class="hero">
+        <div class="hero-content hidden glass-card curvy">
+            <h3 class="hindi-welcome">स्वागतम्</h3>
+            <h1>The Legacy of Taste</h1>
+            <p>Authentic Dhaba heritage, reimagined for the modern connoisseur.</p>
+            <a href="#menu" class="btn curvy-btn gold-glow">Explore Menu</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-text hidden glass-card curvy">
+            <h2>Rooted in Tradition</h2>
+            <p>At Virasat, we blend the rustic, uncompromised flavors of traditional highway dhabas with an exquisitely
+                styled, modern aesthetic dining experience. Every recipe is a slow-cooked masterpiece, served with pride
+                on the historic GT Road in Panipat.</p>
+        </div>
+    </section>
+
+    <section id="ambiance" class="ambiance">
+        <h2 class="hidden">The Experience</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item curvy hidden"><img
+                    src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=600&q=80" alt="Ambiance"></div>
+            <div class="gallery-item curvy hidden"><img
+                    src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=600&q=80" alt="Spices"></div>
+            <div class="gallery-item curvy hidden"><img
+                    src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80" alt="Dining"></div>
+        </div>
+    </section>
+
+    <section id="menu" class="menu">
+        <h2 class="hidden">Order Online</h2>
+        <p style="margin-bottom: 2.5rem; color: var(--text-muted); font-weight: 300;">Select items to build your
+            customized culinary tray.</p>
+
+        <div class="menu-tabs hidden">
+            <button class="tab-btn active curvy-btn" data-target="mains">Main Course</button>
+            <button class="tab-btn curvy-btn" data-target="starters">Starters</button>
+            <button class="tab-btn curvy-btn" data-target="breads">Breads & Rice</button>
+            <button class="tab-btn curvy-btn" data-target="desserts">Beverages & Desserts</button>
+        </div>
+
+        <div class="menu-content">
+            <div id="mains" class="menu-grid tab-content active">
+                <div class="menu-item glass-card curvy">
+                    <div class="item-details">
+                        <h3>Dal Virasat</h3>
+                        <p>Signature black lentils slow-cooked over wood fires for 24 hours, finished with white butter.
+                        </p>
+                        <span class="price">₹280</span>
+                    </div>
+                    <button class="add-to-cart-btn curvy-btn" data-name="Dal Virasat" data-price="280"><i
+                            class="fas fa-plus"></i> Add</button>
+                </div>
+                <div class="menu-item glass-card curvy">
+                    <div class="item-details">
+                        <h3>Dhaba Butter Chicken</h3>
+                        <p>Tandoor-charred chicken pulled into a rich, creamy tomato and cashew root gravy.</p>
+                        <span class="price">₹380</span>
+                    </div>
+                    <button class="add-to-cart-btn curvy-btn" data-name="Dhaba Butter Chicken" data-price="380"><i
+                            class="fas fa-plus"></i> Add</button>
+                </div>
+                <div class="menu-item glass-card curvy">
+                    <div class="item-details">
+                        <h3>Paneer Lababdar</h3>
+                        <p>Fresh cottage cheese cubes folded gently into a thick griddled onion-tomato mash.</p>
+                        <span class="price">₹320</span>
+                    </div>
+                    <button class="add-to-cart-btn curvy-btn" data-name="Paneer Lababdar" data-price="320"><i
+                            class="fas fa-plus"></i> Add</button>
+                </div>
+                <div class="menu-item glass-card curvy">
+                    <div class="item-details">
+                        <h3>Mutton Rogan Josh</h3>
+                        <p>Tender meat cuts simmered inside an aromatic thin broth of Kashmiri spices and yogurt.</p>
+                        <span class="price">₹450</span>
+                    </div>
+                    <button class="add-to-cart-btn curvy-btn" data-name="Mutton Rogan Josh" data-price="450"><i
+                            class="fas fa-plus"></i> Add</button>
+                </div>
+            </div>
+
+            <div id="starters" class="menu-grid tab-content">
+                <div class="menu-item glass-card curvy">
+                    <div class="item-details">
+                        <h3>Bhatti Ka Murgh</h3>
+                        <p>Overnight marinated chicken legs grilled inside our heavy tandoor clay ovens.</p>
+                        <span class="price">₹300</span>
+                    </div>
+                    <button class="add-to-cart-btn curvy-btn" data-name="Bhatti Ka Murgh" data-price="300"><i
+                            class="fas fa-plus"></i> Add</button>
+                </div>
+                <div class="menu-item glass-card curvy">
+                    <div class="item-details">
+                        <h3>Tandoori Mushroom</h3>
+                        <p>Plump whole mushrooms stuffed with spiced cheese and char-roasted perfectly.</p>
+                        <span class="price">₹260</span>
+                    </div>
+                    <button class="add-to-cart-btn curvy-btn" data-name="Tandoori Mushroom" data-price="260"><i
+                            class="fas fa-plus"></i> Add</button>
+                </div>
+                <div class="menu-item glass-card curvy">
+                    <div class="item-details">
+                        <h3>Hara Bhara Kebab</h3>
+                        <p>Pan-seared vegetable patties made of spinach, fresh peas, and locally sourced cottage cheese.
+                        </p>
+                        <span class="price">₹220</span>
+                    </div>
+                    <button class="add-to-cart-btn curvy-btn" data-name="Hara Bhara Kebab" data-price="220"><i
+                            class="fas fa-plus"></i> Add</button>
+                </div>
+            </div>
+
+            <div id="breads" class="menu-grid tab-content">
+                <div class="menu-item glass-card curvy">
+                    <div class="item-details">
+                        <h3>Chur Chur Naan</h3>
+                        <p>Flaky, multilayered tandoori flatbread crushed by hand and laced with liquid ghee.</p>
+                        <span class="price">₹90</span>
+                    </div>
+                    <button class="add-to-cart-btn curvy-btn" data-name="Chur Chur Naan" data-price="90"><i
+                            class="fas fa-plus"></i> Add</button>
+                </div>
+                <div class="menu-item glass-card curvy">
+                    <div class="item-details">
+                        <h3>Butter Tandoori Roti</h3>
+                        <p>Traditional crisp whole wheat bread fresh from the tandoor walls.</p>
+                        <span class="price">₹30</span>
+                    </div>
+                    <button class="add-to-cart-btn curvy-btn" data-name="Butter Tandoori Roti" data-price="30"><i
+                            class="fas fa-plus"></i> Add</button>
+                </div>
+                <div class="menu-item glass-card curvy">
+                    <div class="item-details">
+                        <h3>Jeera Rice</h3>
+                        <p>Aromatic aged Basmati rice tempered subtly with direct cumin seeds and ghee spots.</p>
+                        <span class="price">₹150</span>
+                    </div>
+                    <button class="add-to-cart-btn curvy-btn" data-name="Jeera Rice" data-price="150"><i
+                            class="fas fa-plus"></i> Add</button>
+                </div>
+            </div>
+
+            <div id="desserts" class="menu-grid tab-content">
+                <div class="menu-item glass-card curvy">
+                    <div class="item-details">
+                        <h3>Kulhad Lassi</h3>
+                        <p>Churned sweet yogurt cream layered heavily with malai, topped with crushed saffron
+                            pistachios.</p>
+                        <span class="price">₹80</span>
+                    </div>
+                    <button class="add-to-cart-btn curvy-btn" data-name="Kulhad Lassi" data-price="80"><i
+                            class="fas fa-plus"></i> Add</button>
+                </div>
+                <div class="menu-item glass-card curvy">
+                    <div class="item-details">
+                        <h3>Masala Chai</h3>
+                        <p>Strongly brewed tea leaves decocted together with fresh ginger roots and pounded green
+                            cardamoms.</p>
+                        <span class="price">₹40</span>
+                    </div>
+                    <button class="add-to-cart-btn curvy-btn" data-name="Masala Chai" data-price="40"><i
+                            class="fas fa-plus"></i> Add</button>
+                </div>
+                <div class="menu-item glass-card curvy">
+                    <div class="item-details">
+                        <h3>Mint Jaljeera</h3>
+                        <p>Ice-cold tangy lemonade elixir powered with ground roasted cumin seeds and fresh crushed mint
+                            leaves.</p>
+                        <span class="price">₹60</span>
+                    </div>
+                    <button class="add-to-cart-btn curvy-btn" data-name="Mint Jaljeera" data-price="60"><i
+                            class="fas fa-plus"></i> Add</button>
+                </div>
+                <div class="menu-item glass-card curvy">
+                    <div class="item-details">
+                        <h3>Gulab Jamun</h3>
+                        <p>Two golden reduced-milk dumplings soaked inside warm saffron-infused sugar syrups.</p>
+                        <span class="price">₹100</span>
+                    </div>
+                    <button class="add-to-cart-btn curvy-btn" data-name="Gulab Jamun" data-price="100"><i
+                            class="fas fa-plus"></i> Add</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <h2 class="hidden">What Patrons Say</h2>
+        <div class="gallery-grid">
+            <div class="glass-card curvy testimonial-card hidden">
+                <p>"The absolute best slow-cooked lentils in Haryana. The fluid moving glows in the background look
+                    mind-blowing at night!"</p>
+                <h4>- Rahul S.</h4>
+            </div>
+            <div class="glass-card curvy testimonial-card hidden">
+                <p>"Unbelievable Chur Chur Naan. The online order setup is clean, and checkout throws the items straight
+                    into WhatsApp flawlessly."</p>
+                <h4>- Priya M.</h4>
+            </div>
+        </div>
+    </section>
+
+    <section id="feedback" class="feedback-section">
+        <div class="form-container hidden glass-card curvy">
+            <h2>Share Your Experience</h2>
+            <p class="form-subtitle">Help us preserve our multi-generational culinary legacy.</p>
+
+            <form action="#" class="styled-form">
+                <div class="input-group">
+                    <input type="text" id="name" required placeholder=" ">
+                    <label for="name">Your Name</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="email" required placeholder=" ">
+                    <label for="email">Email Address</label>
+                </div>
+                <div class="input-group">
+                    <textarea id="message" rows="4" required placeholder=" "></textarea>
+                    <label for="message">What did you love about our food?</label>
+                </div>
+                <button type="submit" class="btn curvy-btn gold-glow submit-btn">Send Feedback</button>
+            </form>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3 class="logo-footer">VIRASAT</h3>
+                <p>GT Road, Near Shimla Maulana</p>
+                <p>Panipat, Haryana 132103</p>
+                <p>+91 98765 43210</p>
+            </div>
+            <div class="footer-hours">
+                <h3 style="font-family: 'Poppins', sans-serif; color: var(--gold); margin-bottom: 1rem;">Hours</h3>
+                <p>Open Daily: 11:00 AM - 11:30 PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Virasat. Reimagined with passion.</p>
+        </div>
+    </footer>
+
+    <script src="virasatscript.js"></script>
+</body>
+
+</html>
